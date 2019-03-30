@@ -22,13 +22,15 @@ def hello_world():
 
 #Utility Functions
 def analyse_image(art , f):
-    pass
+    print(art , "\n" , f)
 
 #Utility routes
 @app.route('/upload', methods=['POST' , 'GET'])
 def upload_file():
     if request.method == 'POST':
-        art = request.form.TextArea
+        art = request.form.to_dict()
+        art = art['TextArea']
+        print(art)
         file = request.files['image']
         f = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
 
