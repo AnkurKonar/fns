@@ -1,19 +1,42 @@
 import os
 import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, \
-     render_template, flash
+     render_template, flash, send_from_directory
+#from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 
-app = Flask(__name__) # create the application instance :)
+UPLOAD_FOLDER = '/home/captainlazarus/projects/timeline/Timeline/uploads'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config.from_object(__name__) # load config from this file , flaskr.py
-
-# Load default config and override config from an environment variable
-app.config.update(dict(
-    SECRET_KEY='devkey',
-    USERNAME='',
-    PASSWORD=''
-))
 app.config.from_envvar('TIMELINE_SETTINGS', silent=True)
 
+articles = ['1']
+dates = ['13']
+
+#Main Timeline
 @app.route('/')
-def main():
-    return render_template('test.html')
+def hello_world():
+    return render_template('test.html' , dates = dates , articles = articles)
+
+#Utility Functions
+def analyse_image(art , f):
+    pass
+
+#Utility routes
+@app.route('/upload', methods=['POST' , 'GET'])
+def upload_file():
+    if request.method == 'POST':
+        art = request.form.TextArea
+        file = request.files['image']
+        f = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+
+        # add your custom code to check that the uploaded file is a valid image and not a malicious file (out-of-scope for this post)
+        file.save(f)
+
+        analyse_image(art , f)
+
+        return render_template('index1.html')
+    else:
+        return render_template('index1.html')

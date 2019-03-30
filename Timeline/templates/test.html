@@ -30,7 +30,7 @@
         <span class="timeline-balloon-date-month">APR</span>
     </div>
 
-
+article
     <div class="col-sm-6  timeline-item">
         <div class="row">
             <div class="col-sm-11">
@@ -64,15 +64,16 @@
 
 <!--due -->
 
-<div class="row timeline-movement">
-
-
+<div class="row timeline-movement dates ">
+ 
+    {% for date in dates %}
     <div class="timeline-badge">
-        <span class="timeline-balloon-date-day">13</span>
+        <span class="timeline-balloon-date-day">{{ date }}</span>
         <span class="timeline-balloon-date-month">APR</span>
     </div>
 
-    <div class="col-sm-offset-6 col-sm-6  timeline-item">
+    {% for article in articles %}
+    <div class="col-sm-offset-6 col-sm-6  timeline-item articles">
         <div class="row">
             <div class="col-sm-offset-1 col-sm-11">
                 <div class="timeline-panel debits">
@@ -87,7 +88,7 @@
         </div>
     </div>
 
-    <div class="col-sm-6  timeline-item">
+    <div class="col-sm-6  timeline-item articles">
         <div class="row">
             <div class="col-sm-11">
                 <div class="timeline-panel credits">
@@ -101,7 +102,8 @@
             </div>
         </div>
     </div>
-
+    {% endfor %}
+    {% endfor %}
 
 <!-- </div>
 <div class="row timeline-movement">
