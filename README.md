@@ -1,16 +1,18 @@
-RealU - A Platform for filtered and untampered media 
+![](https://github.com/AnkurKonar/fns/blob/master/Screenshot%20from%202019-03-31%2008-33-37.png)
 
-PROBLEM:
+# RealU - A Platform for filtered and untampered media 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# PROBLEM:
 
 What is the main problem of Indian Media? And who are the ones who get actually affected by the spreading of news, be it fake or not? It’s us, the common people. Whatever news we learn, we spread it to the nearest neighbours and so on.
 
-SOLUTION:
+# SOLUTION:
 
 We have come up with a solution to this, An Artificial Intelligence model that helps you detect fake media and stay away from them. We not only check for fake photos but also for fake news content. Its basically brings news(any media) from all over the world and checks how trustworthy it is. 
 
 Given India’s low literacy rate, images play a vital role in the spread of information. Images also have the ability to capture people’s attention quicker than text. This characteristic of a picture, unfortunately, can also be used to disseminate misinformation on a wide scale. The danger of fake information propagated through images is especially evident in India, especially in these pre-Election days wherein it has resulted in unwanted consequences, including death.
 
-STEPS TO FIND THE FAKE MEDIA:
+# STEPS TO FIND THE FAKE MEDIA:
 
 Viral social media posts and message forwards usually consist of an image and an associated title. Although the image might depict one a particular phenomenon or event, the text could purposefully be chosen to incite the viewer. For example, an image of two people having a physical altercation in which one person is wearing a skull cap can easily be misunderstood if the associated text were “Riots broken out at Faridabad - Muslims versus Hindus once again”. Although this was a hypothetical example, it is not impossible for us to envision a similar method of fake news propagation that could end up having fatal consequences.
 
