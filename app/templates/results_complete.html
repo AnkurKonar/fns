@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block title %}RealU-Complete Analysis{% endblock %}
+{% block head %}
+<style>
+  .flask-pagedown-input {
+    float: left;
+    width: 49%;
+}
+  .flask-pagedown-preview {
+    float: left;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #f0f0f0;
+    margin-top: 5px;
+    margin-left: 2%;
+    padding: 5px;
+    width: 49%;
+}
+@media (max-width: 767.98px) {
+    .flask-pagedown-input {
+      float: none;
+      width: 100%;
+  }
+    .flask-pagedown-preview {
+      border: 1px solid black;
+      border-radius: 2px;
+      background-color: #f0f0f0;
+      margin-top: 5px;
+      margin-left: 0%;
+      padding: 5px;
+      width: 100%;
+  }
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+  <h1 style="text-align: center; font-family: 'Anton', sans-serif;" class="unselectable">Results of News Analysis</h1>
+    <br><br>
+    <h4><b>{{data['headline']}}</b></h4>
+    <hr>
+    <p>{{data['body']}}</p>
+  <h2 style="font-family: 'Anton', sans-serif;">Webpages where image is used</h2>
+  <div class="list-group">
+  {% for i in range(0,data['page_urls']|length) %}
+    <a href="{{ data['page_urls'][i] }}" class="list-group-item list-group-item-action">
+        <b>{{ data['page_urls'][i] }}</b>
+    </a>
+  {% endfor %}
+  </div>
+
+  <br><br>
+  <h2 style="font-family: 'Anton', sans-serif;">Crediable News sources where image is used</h2>
+  <div class="list-group">
+  {% for i in range(0,data['crediable_from_url']|length) %}
+    <a href="{{ data['crediable_from_url'][i] }}" class="list-group-item list-group-item-action">
+        <b>{{ data['crediable_from_url'][i] }}</b>
+    </a>
+  {% endfor %}
+  </div>
+
+  <br><br>
+  <h2 style="font-family: 'Anton', sans-serif;">Crediable News Titles where image is used</h2>
+  <div class="list-group">
+  {% for i in range(0,data['titles']|length) %}
+    <b>{{ data['titles'][i] }}</b>
+  {% endfor %}
+  </div>
+
+  <br><br>
+  <h2 style="font-family: 'Anton', sans-serif;">Final Verdict:</h2>
+  <b><h4>{{ data['result'] }}</h4></b>
+
+  <br><br>
+
+</div>
+{% endblock%}
+
+{% block script %}
+{% endblock %}

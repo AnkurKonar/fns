@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block title %}RealU-Complete Analysis{% endblock %}
+{% block head %}
+<style>
+  .flask-pagedown-input {
+    float: left;
+    width: 49%;
+}
+  .flask-pagedown-preview {
+    float: left;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #f0f0f0;
+    margin-top: 5px;
+    margin-left: 2%;
+    padding: 5px;
+    width: 49%;
+}
+@media (max-width: 767.98px) {
+    .flask-pagedown-input {
+      float: none;
+      width: 100%;
+  }
+    .flask-pagedown-preview {
+      border: 1px solid black;
+      border-radius: 2px;
+      background-color: #f0f0f0;
+      margin-top: 5px;
+      margin-left: 0%;
+      padding: 5px;
+      width: 100%;
+  }
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid text-center pagination-centered">
+  <h1 style="font-family: 'Anton', sans-serif;">Perform Analysis on Complete News</h1>
+  <br><br>
+  <form method="post" enctype="multipart/form-data">
+      <div class="form-group col-md-6 col-s-12" style="margin:0 auto">
+          {{ form.headline.label }}
+          {{ form.headline(class_="form-control")}}
+          {% for error in form.headline.errors %}
+            <span style="color: red; font-family: Arial, Helvetica, sans-serif;">
+              [{{ error }}]
+            </span>
+          {% endfor %}
+      </div><br>
+      <div class="form-group col-md-6 col-s-12" style="margin:0 auto">
+          {{ form.body.label }}
+          {{ form.body(class_="form-control",cols="35", rows="10") }}
+          {% for error in form.body.errors %}
+            <span style="color: red; font-family: Arial, Helvetica, sans-serif;">
+              [{{ error }}]
+            </span>
+          {% endfor %}
+      </div><br>
+      <input type="file" name="image" style="margin:0 auto">
+      <br><br><br>
+            <input type="submit" value="Submit" class="btn btn-primary text-center pagination-centered" style="margin:0 auto">
+      </div> 
+      <br/>
+</form>
+</div>
+{% endblock%}
+
+{% block script %}
+{% endblock %}

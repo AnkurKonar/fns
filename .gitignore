@@ -1,0 +1,4 @@
+/venv/
+key.json
+GoogleNews-vectors-negative300.bin.gz
+model_image-05-0.9427.hdf5
