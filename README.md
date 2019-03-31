@@ -1,10 +1,12 @@
+RealU - A Platform for filtered and untampered media 
+
 PROBLEM:
 
 What is the main problem of Indian Media? And who are the ones who get actually affected by the spreading of news, be it fake or not? It’s us, the common people. Whatever news we learn, we spread it to the nearest neighbours and so on.
 
 SOLUTION:
 
-We have come up with a solution to this, We haven’t named it as of yet (Hopefully by the end of this hackathon we will). Its basically brings news(any media) from all over the world and checks how trustworthy it is. 
+We have come up with a solution to this, An Artificial Intelligence model that helps you detect fake media and stay away from them. We not only check for fake photos but also for fake news content. Its basically brings news(any media) from all over the world and checks how trustworthy it is. 
 
 Given India’s low literacy rate, images play a vital role in the spread of information. Images also have the ability to capture people’s attention quicker than text. This characteristic of a picture, unfortunately, can also be used to disseminate misinformation on a wide scale. The danger of fake information propagated through images is especially evident in India, especially in these pre-Election days wherein it has resulted in unwanted consequences, including death.
 
@@ -19,7 +21,7 @@ The program searches through the list of page URLs to check if any of them are c
 
 The program scrapes each URL from the list in order to extract the titles of each news article and is made to decipher the semantic similarity between the titles we have extracted and the original associated title. To perform this text meaning comparison, the program uses Google’s pre-trained news article text corpus which is trained on the Word2Vec algorithm.
 
-In the next Steps, we are creating a platform to give the user and experience of trustworthy news and reduces the sharing of fake news or fake photos.
+In the next Steps, We also filtered news just on the basis of the headline and content and also provided suggestion on which source are trustable and which are not.
 
 In order to be as helpful as possible to a user, our program provides the user a plethora of information to aid in manual verification.
 
