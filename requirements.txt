@@ -24,7 +24,7 @@ chrome-gnome-shell==0.0.0
 Click==7.0
 command-not-found==0.3
 ConfigArgParse==0.14.0
-cryptography==2.5
+cryptography==3.2
 cupshelpers==1.0
 cycler==0.10.0
 Cython==0.26.1
