@@ -101,7 +101,7 @@ pbr==3.1.1
 peewee==3.8.2
 pexpect==4.2.1
 Pillow==5.4.1
-protobuf==3.7.1
+protobuf==3.18.3
 prov==1.5.3
 py3nvml==0.2.2
 pyasn1==0.4.5
